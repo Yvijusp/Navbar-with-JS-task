@@ -39,8 +39,8 @@ button.addEventListener('click', () => {
   logo.style.color = 'white';
   logo.style.fontSize = '2em';
   header.appendChild(toggler);
-  toggler.style.width = '50%';
-  toggler.style.display = 'flex';
+  toggler.style.width = '0&';
+  toggler.style.display = 'none';
   toggler.style.justifyContent = 'flex-end';
   toggler.style.fontSize = '2em';
   toggler.style.color = 'white';
@@ -48,13 +48,14 @@ button.addEventListener('click', () => {
   i.className = 'fas fa-bars';
   i.style.cursor = 'pointer';
   header.appendChild(nav);
-  nav.style.width = '100%';
+  nav.style.width = '50%';
   nav.style.textAlign = 'center';
-  nav.style.display = 'none';
+  nav.style.display = 'block';
   nav.appendChild(ul);
   ul.style.listStyle = 'none';
   ul.style.display = 'flex';
-  ul.style.flexDirection = 'column';
+  ul.style.flexDirection = 'row';
+  ul.style.justifyContent = 'flex-end';
   ul.style.margin = '5px';
   li.style.color = 'white';
   li.style.padding = '3px';
