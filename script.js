@@ -15,6 +15,7 @@ let p = document.createElement('p');
 let i = document.createElement('i');
 let nav = document.createElement('nav');
 let body = document.body;
+const tablet = window.matchMedia('(min-width: 768px)');
 
 const home = document.createTextNode('Home');
 const aboutUs = document.createTextNode('About us');
@@ -52,6 +53,8 @@ button.addEventListener('click', () => {
   nav.style.display = 'none';
   nav.appendChild(ul);
   ul.style.listStyle = 'none';
+  ul.style.display = 'flex';
+  ul.style.flexDirection = 'column';
   ul.style.margin = '5px';
   li.style.color = 'white';
   li.style.padding = '3px';
@@ -74,6 +77,23 @@ button.addEventListener('click', () => {
     }
     nav.style.display = 'none';
   });
+
+  tablet.onchange = (e) => {
+    if (tablet.matches) {
+      toggler.style.width = '0&';
+      toggler.style.display = 'none';
+      nav.style.width = '50%';
+      nav.style.display = 'block';
+      ul.style.flexDirection = 'row';
+      ul.style.justifyContent = 'flex-end';
+      return;
+    }
+    toggler.style.width = '50%';
+    toggler.style.display = 'flex';
+    nav.style.width = '100%';
+    nav.style.display = 'none';
+    ul.style.flexDirection = 'column';
+  };
 
   document.body.appendChild(main);
   document.body.appendChild(footer);
