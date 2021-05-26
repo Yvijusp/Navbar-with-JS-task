@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  padding: 15px;
+  flex-wrap: wrap;
+  background-color: thistle;
+  align-items: center;
+}
+
+.header .logo {
+  width: 50%;
+  font-size: 2em;
+  color: white;
+}
+
+.header .toggler {
+  width: 50%;
+  font-size: 2em;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggler i {
+  cursor: pointer;
+}
+
+.navigation {
+  width: 100%;
+  text-align: center;
+  /* display: none; */
+}
+
+.active {
+  display: block;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.navigation ul > li {
+  color: white;
+}
